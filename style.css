@@ -1,0 +1,230 @@
+/* ##### CSS Variables ##### */
+:root {
+  --header-height: 3rem;
+  --nav-width: 68px;
+
+  /* Colors */
+  --primary-color: #2083ff;
+  --secondary-color: #d6e9ff;
+  --white-color: #f5f9ff;
+
+  /* Z-Index */
+  --z-fixed: 100;
+}
+/* ##### End CSS Variables ##### */
+
+/* ##### Base CSS ##### */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+/* ##### End Base CSS ##### */
+
+body {
+  margin: var(--header-height) 0 0 0;
+  padding: 0 1rem;
+  position: relative;
+  transition: 0.3s;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ##### Header Area ##### */
+#header {
+  align-items: center;
+  background-color: var(--white-color);
+  display: flex;
+  height: var(--header-height);
+  justify-content: space-between;
+  left: 0;
+  padding: 0 1rem;
+  position: fixed;
+  top: 0;
+  transition: 0.3s;
+  width: 100%;
+  z-index: var(--z-fixed);
+}
+
+/* Header Toggler */
+.header-toggler {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* User Avatar */
+.header-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.header-user .avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+/* ##### End Header Area ##### */
+
+/* Left Sidebar Styling */
+#l-navbar {
+  position: fixed;
+  top: 0;
+  left: -30%;
+  width: var(--nav-width);
+  height: 100vh;
+  background-color: var(--primary-color);
+  padding: 0.5rem 1rem 0 0;
+  transition: 0.3s;
+  z-index: var(--z-fixed);
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.navbar-logo {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  column-gap: 5px;
+  padding: 0.5rem 0 0.5rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.nav-logo-icon {
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+.nav-logo-name {
+  color: var(--white-color);
+  font-weight: 500;
+}
+
+.navbar-menu-items {
+  display: flex;
+  flex-flow: column;
+  align-items: start;
+  font-size: 1rem;
+}
+
+.nav-item {
+  position: relative;
+  color: var(--secondary-color);
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  transition: 0.3s;
+  display: inline-flex;
+  padding: 0.5rem 1rem;
+}
+
+.nav-item:hover {
+  color: var(--white-color);
+}
+
+.nav-item-icon {
+  font-size: 1.25rem;
+}
+
+.nav-item-name {
+  padding-left: 0.5rem;
+}
+
+/* Main Panel */
+.main p{
+    margin-top: 1rem;
+}
+
+.main a{
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Display Navbar on Mobile */
+.show {
+  left: 0 !important;
+}
+
+.body-pd {
+  padding-left: calc(var(--nav-width) + 1rem) !important;
+}
+
+/* Active Links */
+.active {
+  color: #ffffff;
+}
+.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 2px;
+  height: 32px;
+  background-color: var(--white-color);
+}
+
+/* Responsive Media Queries */
+@media screen and (min-width: 768px) {
+  body {
+    margin: calc(var(--header-height) + 1rem) 0 0 0;
+    padding-left: calc(var(--nav-width) + 2rem);
+    padding-top: 2rem;
+  }
+
+  #header {
+    height: calc(var(--header-height) + 1rem);
+    padding: 0 2rem 0 calc(var(--nav-width) + 2rem);
+  }
+
+  #l-navbar {
+    left: 0 !important;
+    padding: 1rem 1rem 0 0;
+  }
+
+  .show {
+    width: calc(var(--nav-width) + 156px) !important;
+  }
+
+  .body-pd {
+    padding-left: calc(var(--nav-width) + 188px) !important;
+  }
+}

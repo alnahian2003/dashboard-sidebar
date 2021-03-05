@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Montserrat Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Material Fonts -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Responsive Sidebar Menu</title>
+  </head>
+  <body id="body-pd">
+    <!-- Header Area -->
+    <header id="header">
+      <!-- Header Toggler for Sidebar -->
+      <div class="header-toggler">
+        <span class="material-icons material-icons-outlined" id="header-toggle">
+          menu
+        </span>
+      </div>
+
+      <!-- User Section -->
+      <div class="header-user">
+        <img src="avatar.jpg" alt="Avatar" class="avatar" />
+        <span class="welcome-message">Howdy, Al Nahian!</span>
+      </div>
+    </header>
+
+    <!-- Left Sidebar/Navigation Bar -->
+    <div class="left-navbar" id="l-navbar">
+      <nav class="nav">
+        <div class="navbar-main-items">
+          <a
+            href="https://alnahian2003.github.io"
+            target="_blank"
+            class="navbar-logo"
+          >
+            <span class="material-icons material-icons-outlined nav-logo-icon">
+              code
+            </span>
+            <span class="nav-logo-name">MetaCoder</span>
+          </a>
+
+          <div class="navbar-menu-items">
+            <!-- Dashboard -->
+            <a href="#" class="nav-item active">
+              <span
+                class="material-icons material-icons-outlined nav-item-icon"
+              >
+                dashboard
+              </span>
+              <span class="nav-item-name"> Dashboard </span>
+            </a>
+
+            <!-- Analytics -->
+            <a href="#" class="nav-item">
+              <span
+                class="material-icons material-icons-outlined nav-item-icon"
+              >
+                analytics
+              </span>
+              <span class="nav-item-name"> Analytics </span>
+            </a>
+
+            <!-- Payments -->
+            <a href="#" class="nav-item">
+              <span
+                class="material-icons material-icons-outlined nav-item-icon"
+              >
+                payments
+              </span>
+              <span class="nav-item-name"> Payments </span>
+            </a>
+
+            <!-- Email -->
+            <a href="#" class="nav-item">
+              <span
+                class="material-icons material-icons-outlined nav-item-icon"
+              >
+                mark_as_unread
+              </span>
+              <span class="nav-item-name"> Email </span>
+            </a>
+
+            <!-- Users -->
+            <a href="#" class="nav-item">
+              <span
+                class="material-icons material-icons-outlined nav-item-icon"
+              >
+                supervisor_account
+              </span>
+              <span class="nav-item-name"> Users </span>
+            </a>
+
+            <!-- Bug Reports -->
+            <a href="#" class="nav-item">
+              <span
+                class="material-icons material-icons-outlined nav-item-icon"
+              >
+                bug_report
+              </span>
+              <span class="nav-item-name"> Reports </span>
+            </a>
+          </div>
+        </div>
+        <!-- Logout Icon -->
+        <a href="#" class="nav-item">
+          <span class="material-icons material-icons-outlined nav-item-icon">
+            logout
+          </span>
+          <span class="nav-item-name"> Log Out </span>
+        </a>
+      </nav>
+    </div>
+    <!-- Main Panel -->
+    <div class="main">
+      <h1>Dashboard</h1>
+      <p>I know, it ain't much. But it's honest work!</p>
+      <p>
+        Made with honest ♥ by
+        <a href="https://github.com/alnahian2003" target="_blank"
+          >alnahian2003</a
+        >
+      </p>
+    </div>
+
+    <!-- Main JavaScript -->
+    <script src="main.js"></script>
+  </body>
+</html>
